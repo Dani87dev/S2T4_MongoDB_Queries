@@ -23,7 +23,7 @@
 3. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({}, {_id:0, restaurant_id:1, name:1, borough:1, cuisine:1})`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -33,12 +33,23 @@
 
 4. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({}, {_id:0, restaurant_id:1, name:1, borough:1, cuisine:2341})`
+- 🧪 **Query**: `db.restaurants.find({}, {"_id":0, "restaurant_id":1, "name":1, "borough":1, "address.zipcode":1})`
 - ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
-- 🛠️ **Execution stage**: PROJECTION_SIMPLE
+- 🛠️ **Execution stage**: PROJECTION_DEFAULT
 
-## ✅ No significant issues detected
+## 🚨 Performance Issues
+
+### ℹ️ Recommendations
+- ‼️ Filtering on unindexed field 'borough' - performance may suffer.
+- ‼️ Filtering on unindexed field 'name' - performance may suffer.
+
+### 💡 Suggested Indexes
+Consider creating these indexes:
+```javascript
+db.restaurants.createIndex({ borough: 1 });
+db.restaurants.createIndex({ name: 1 });
+```
 
 
