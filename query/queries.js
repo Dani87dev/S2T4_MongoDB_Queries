@@ -9,6 +9,7 @@ db.restaurants.find({}, {_id:0, restaurant_id:1, name:1, borough:1, cuisine:1});
 
 
 // 4. Mostrar restaurant_id, name, borough i zip code.
+db.restaurants.find({}, {_id:0, restaurant_id:1, name:1, borough:1, cuisine:2341});
 
 
 // 5. Mostrar tots els restaurants que estan en el Bronx.
