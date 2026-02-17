@@ -52,12 +52,7 @@
 - **Got:** 0
 
 ---
-- ❌ MISMATCH - Query **[ 13 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"_id":"69942093af0d87d205a4872c","address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
+- ✔️ OK - Query **[ 13 ]**
 
 ---
 - ✔️ OK - Query **[ 14 ]**
@@ -69,12 +64,7 @@
 - ✔️ OK - Query **[ 16 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 17 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
-- **Actual:** {"_id":"69942093af0d87d205a48738","address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
+- ✔️ OK - Query **[ 17 ]**
 
 ---
 - ✔️ OK - Query **[ 18 ]**
