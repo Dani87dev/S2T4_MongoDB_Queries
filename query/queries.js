@@ -34,31 +34,31 @@ db.restaurants.find({"address.coord.0": {$lt:-95.754168}});
 db.restaurants.find({$and:[{cuisine: {$ne:"American"}}, {"grades.score": {$gt:70}}, {"address.coord.0": {$lt:-65.754168}}]});
 
 // 12. El mateix que l'anterior però sense usar operador $and.
-
+db.restaurants.find({cuisine: {$ne:"American"}, "grades.score": {$gt:70}, "address.coord.0": {$lt:-65.754168}});
 
 // 13. Trobar restaurants que no són 'American', grau 'A', i no són de Brooklyn. Ordenats per cuisine descendent.
-
+db.restaurants.find({$and:[{cuisine:{$ne:"American"}},{"grades.grade":"A"},{"borough":{$ne:"Brooklyn"}}]}).sort({cuisine:-1});
 
 // 14. Trobar restaurant_id, name, borough i cuisine on el nom comença amb 'Wil'.
-
+db.restaurants.find({name:{$regex:/^Wil/}},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 15. Trobar restaurant_id, name, borough i cuisine on el nom acaba en 'ces'.
-
+db.restaurants.find({name:{$regex:/ces$/}},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 16. Trobar restaurant_id, name, borough i cuisine on el nom conté 'Reg'.
-
+db.restaurants.find({name:{$regex:/Reg/}},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 17. Trobar restaurants del Bronx que preparen cuina americana o xinesa.
-
+db.restaurants.find({borough:"Bronx",$or:[{cuisine:"American"},{cuisine:"Chinese"}]});
 
 // 18. Trobar restaurant_id, name, borough i cuisine per a Staten Island, Queens, Bronx o Brooklyn.
-
+db.restaurants.find({$or:[{borough:"Staten Island"},{borough:"Queens"},{borough:"Bronx"},{borough:"Brooklyn"}]},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 19. Trobar restaurant_id, name, borough i cuisine per a restaurants que NO són d'aquests barris.
-
+db.restaurants.find({$nor:[{borough:"Staten Island"},{borough:"Queens"},{borough:"Bronx"},{borough:"Brooklyn"}]},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 20. Trobar restaurant_id, name, borough i cuisine amb marcador no superior a 10.
-
+db.restaurants.find({"grades.score":{$lte:10}},{restaurant_id:1,name:1,borough:1,cuisine:1,_id:0});
 
 // 21. Trobar restaurants que preparen peix, no 'American' ni 'Chinees', o nom comença amb 'Wil'.
 
