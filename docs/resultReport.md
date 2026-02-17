@@ -1,12 +1,7 @@
 # 📊 Query Expected Result Report
 
 ---
-- ❌ MISMATCH - Query **[ 1 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"_id":"69941f5ed0a335cd98a5ad4d","address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
+- ✔️ OK - Query **[ 1 ]**
 
 ---
 - ✔️ OK - Query **[ 2 ]**
@@ -18,12 +13,7 @@
 - ✔️ OK - Query **[ 4 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 5 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"_id":"69941f5ed0a335cd98a5ad4d","address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
+- ✔️ OK - Query **[ 5 ]**
 
 ---
 - ✔️ OK - Query **[ 6 ]**
@@ -67,7 +57,7 @@
 
 🧩 Mismatch at position 0:
 - **Expected:** {"address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
-- **Actual:** {"_id":"69941f5ed0a335cd98a5ad4d","address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
+- **Actual:** {"_id":"69942093af0d87d205a4872c","address":{},"borough":"Bronx","cuisine":"Bakery","grades":[{},{},{},{},{}],"location":{},"name":"Morris Park Bake Shop","restaurant_id":30075445}
 
 ---
 - ✔️ OK - Query **[ 14 ]**
@@ -84,7 +74,7 @@
 
 🧩 Mismatch at position 0:
 - **Expected:** {"address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
-- **Actual:** {"_id":"69941f5ed0a335cd98a5ad56","address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
+- **Actual:** {"_id":"69942093af0d87d205a48738","address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
 
 ---
 - ✔️ OK - Query **[ 18 ]**
